@@ -21,7 +21,7 @@ class Blockchain:
         return block
 
     def get_previous_block(self):
-        return self.chain = [-1]
+        return self.chain[-1]
 
     def proof_of_work(self, previous_proof):
         new_proof = 1
@@ -44,7 +44,7 @@ class Blockchain:
         block_index = 1
         while block_index < len(chain):
             block = chain['block_index']
-            if block = chain['previous_block'] != self.hash(previous_block):
+            if block['previous_block'] != self.hash(previous_block):
                 return False
             previous_proof  = previous_block['proof']
             proof = block['proof']
